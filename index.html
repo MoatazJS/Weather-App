@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div
+      class="navbar d-flex justify-content-around align-items-center bg-dark text-white"
+    >
+      <div class="title d-flex justify-content-center align-items-center">
+        <img
+          class="img-fluid rounded-circle logoTitle"
+          src="titlelogo.png"
+          alt="logo"
+        />
+        <h1 class="fs-4 m-0">Weather App</h1>
+      </div>
+      <div class="links pt-3">
+        <ul
+          class="d-flex justify-content-center align-items-center gap-4 list-unstyled"
+        >
+          <li>
+            <a class="text-decoration-none text-white" href="#">Home</a>
+          </li>
+          <li>
+            <a class="text-decoration-none text-white" href="#">News</a>
+          </li>
+          <li>
+            <a class="text-decoration-none text-white" href="#">Live Cameras</a>
+          </li>
+          <li>
+            <a class="text-decoration-none text-white" href="#">Photos</a>
+          </li>
+          <li>
+            <a class="text-decoration-none text-white" href="#">Contact</a>
+          </li>
+          <li>
+            <button class="btn btn-outline-light rounded-circle border-0">
+              <i class="bi bi-brightness-high-fill"></i>
+              <i class="bi bi-moon-fill d-none"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="srch">
+        <div class="searchBar">
+          <input type="text" id="search" placeholder="Search.." />
+        </div>
+        <div class="main">
+          <div class="firstContent">
+            <div>
+              <h2 class="cityName">Cairo</h2>
+              <h2 class="date">30 June</h2>
+            </div>
+            <div class="temp"></div>
+            <div class="weather"></div>
+          </div>
+
+          <div class="secondarycontent">
+            <div class="secContent">
+              <div class="date"></div>
+              <div class="temp"></div>
+              <div class="weather"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="javascript/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
