@@ -6,3 +6,7 @@
 .searchInput::placeholder {
   color: white;
 }
+
+.minHeight {
+  min-height: 60vh;
+}
