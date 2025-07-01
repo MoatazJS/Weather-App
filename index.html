@@ -22,68 +22,68 @@
     <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body class="text-bg-secondary">
-    <header
-      class="navbar d-flex justify-content-around align-items-center bg-dark text-white"
-    >
-      <div class="title d-flex justify-content-center align-items-center">
-        <img
-          class="img-fluid rounded-4 logoTitle"
-          src="titlelogo.png"
-          alt="logo"
-        />
-        <h1 class="fs-4 m-0">Weather App</h1>
-      </div>
-      <div class="links pt-3">
-        <ul
-          class="d-flex justify-content-center align-items-center gap-4 list-unstyled"
-        >
-          <li>
-            <a
-              class="text-decoration-none btn btn-outline-light rounded-4 border-0"
-              href="#"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a
-              class="text-decoration-none btn btn-outline-light rounded-4 border-0"
-              href="#"
-              >News</a
-            >
-          </li>
-          <li>
-            <a
-              class="text-decoration-none btn btn-outline-light rounded-4 border-0"
-              href="#"
-              >Live Cameras</a
-            >
-          </li>
-          <li>
-            <a
-              class="text-decoration-none btn btn-outline-light rounded-4 border-0"
-              href="#"
-              >Photos</a
-            >
-          </li>
-          <li>
-            <a
-              class="text-decoration-none btn btn-outline-light rounded-4 border-0"
-              href="#"
-              >Contact</a
-            >
-          </li>
-          <li>
-            <button
-              type="button"
-              class="btn btn-outline-light rounded-circle border-0"
-              aria-label="Toggle Theme"
-            >
-              <i class="bi bi-brightness-high-fill"></i>
-              <i class="bi bi-moon-fill d-none"></i>
-            </button>
-          </li>
-        </ul>
-      </div>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+            <img
+              src="titlelogo.png"
+              alt="Weather App Logo"
+              class="img-fluid rounded-4 logoTitle"
+            />
+            <span class="fs-4">Weather App</span>
+          </a>
+          <button
+            type="button"
+            class="btn btn-outline-light rounded-circle border-0 d-lg-none"
+            aria-label="Toggle Theme"
+          >
+            <i class="bi bi-brightness-high-fill"></i>
+            <i class="bi bi-moon-fill d-none"></i>
+          </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav gap-lg-4 text-center">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Live Cameras</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Photos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <button
+            type="button"
+            class="btn btn-outline-light rounded-circle border-0 d-none d-lg-inline"
+            aria-label="Toggle Theme"
+          >
+            <i class="bi bi-brightness-high-fill"></i>
+            <i class="bi bi-moon-fill d-none"></i>
+          </button>
+        </div>
+      </nav>
     </header>
 
     <section class="container my-4">
