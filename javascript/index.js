@@ -14,6 +14,13 @@ function toggleLightTheme() {
   moon.forEach((icon) => icon.classList.toggle("d-none"));
 
   allElements.forEach((el) => {
+    if (el.classList.contains("text-bg-dark")) {
+      el.classList.remove("text-bg-dark");
+      el.classList.add("card-light-theme");
+    } else if (el.classList.contains("card-light-theme")) {
+      el.classList.remove("card-light-theme");
+      el.classList.add("text-bg-dark");
+    }
     if (el.classList.contains("bg-secondary")) {
       el.classList.remove("bg-secondary");
       el.classList.add("bg-light-body");

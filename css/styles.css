@@ -26,7 +26,11 @@
   background-color: #f8f9fa !important;
   color: #212529 !important;
 }
-
+.card-light-theme {
+  background-color: #d6ecf3;
+  color: black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 .white-btn {
   background-color: #f8f9fa;
   color: #212529;
