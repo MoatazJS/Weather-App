@@ -8,7 +8,11 @@ toggleBtn.forEach((btn) => {
     toggleLightTheme();
   });
 });
-
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+  });
+});
 function toggleLightTheme() {
   sun.forEach((icon) => icon.classList.toggle("d-none"));
   moon.forEach((icon) => icon.classList.toggle("d-none"));
@@ -44,3 +48,5 @@ function toggleLightTheme() {
     }
   });
 }
+
+/** API AND WEBSITE FUNCTIONALITY */
