@@ -26,3 +26,13 @@
   background-color: #f8f9fa !important;
   color: #212529 !important;
 }
+
+.white-btn {
+  background-color: #f8f9fa;
+  color: #212529;
+  transition: none;
+}
+
+.transition {
+  transition: none !important;
+}

@@ -21,5 +21,19 @@ function toggleLightTheme() {
       el.classList.remove("bg-light-body");
       el.classList.add("bg-secondary");
     }
+    if (el.classList.contains("bg-dark")) {
+      el.classList.remove("bg-dark");
+      el.classList.add("bg-light-content");
+    } else if (el.classList.contains("bg-light-content")) {
+      el.classList.remove("bg-light-content");
+      el.classList.add("bg-dark");
+    }
+    if (el.classList.contains("btn-secondary")) {
+      el.classList.remove("btn-secondary");
+      el.classList.add("white-btn");
+    } else if (el.classList.contains("white-btn")) {
+      el.classList.remove("white-btn");
+      el.classList.add("btn-secondary");
+    }
   });
 }
