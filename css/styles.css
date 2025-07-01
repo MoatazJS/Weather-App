@@ -10,3 +10,19 @@
 .minHeight {
   min-height: 60vh;
 }
+
+.bg-light-body {
+  background-color: #f1f1f1 !important;
+}
+.bg-light-content {
+  background-color: #86c1d4;
+}
+
+.text-dark-custom {
+  color: #212529 !important;
+}
+
+.text-bg-light-custom {
+  background-color: #f8f9fa !important;
+  color: #212529 !important;
+}
