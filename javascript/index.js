@@ -1,3 +1,4 @@
+/** Variables Decleration */
 var toggleBtn = document.querySelectorAll(".toggleBtn");
 var allElements = document.querySelectorAll("*");
 var sun = document.querySelectorAll(".sun");
@@ -5,6 +6,7 @@ var moon = document.querySelectorAll(".moon");
 var searchInput = document.querySelector(".searchInput");
 var originalInputClasses;
 
+/** Light Theme / Dark Theme Toggle. */
 toggleBtn.forEach((btn) => {
   btn.addEventListener("click", function () {
     toggleLightTheme();
@@ -117,4 +119,5 @@ function updateCards(forecastDays, cityName) {
   });
 }
 
+/**load on initial visit. */
 getWeather("Alexandria");
