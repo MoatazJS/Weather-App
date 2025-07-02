@@ -51,6 +51,16 @@ function toggleLightTheme() {
       el.classList.add("btn-secondary");
     }
   });
+  var conditions = document.querySelectorAll(".condition");
+  conditions.forEach((condition) => {
+    condition.classList.remove("text-dark", "text-light");
+    // Pick color based on any theme-indicator class
+    if (document.querySelector(".card-light-theme")) {
+      condition.classList.add("text-dark");
+    } else {
+      condition.classList.add("text-light");
+    }
+  });
   var originalInputClasses = searchInput.className;
 }
 searchInput.addEventListener("focus", () => {
