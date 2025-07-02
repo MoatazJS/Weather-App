@@ -2,6 +2,8 @@ var toggleBtn = document.querySelectorAll(".toggleBtn");
 var allElements = document.querySelectorAll("*");
 var sun = document.querySelectorAll(".sun");
 var moon = document.querySelectorAll(".moon");
+var searchInput = document.querySelector(".searchInput");
+var originalInputClasses;
 
 toggleBtn.forEach((btn) => {
   btn.addEventListener("click", function () {
@@ -47,7 +49,15 @@ function toggleLightTheme() {
       el.classList.add("btn-secondary");
     }
   });
+  var originalInputClasses = searchInput.className;
 }
+searchInput.addEventListener("focus", () => {
+  searchInput.classList.add("searchInputFocus");
+});
+
+searchInput.addEventListener("blur", () => {
+  searchInput.classList.remove("searchInputFocus");
+});
 
 /** API AND WEBSITE FUNCTIONALITY */
 
