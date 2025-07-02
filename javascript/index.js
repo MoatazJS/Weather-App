@@ -82,6 +82,13 @@ function updateCards(forecastDays, cityName) {
   forecastDays.forEach((day, index) => {
     if (cards[index]) {
       var card = cards[index];
+      var iconUrl = "https:" + day.day.condition.icon;
+      var conditionText = day.day.condition.text;
+
+      var icon = card.querySelector(".weatherIcon");
+      icon.src = iconUrl;
+      icon.alt = conditionText;
+      card.querySelector(".condition").textContent = conditionText;
 
       card.querySelector(".cityName").textContent = cityName;
       card.querySelector(".date").textContent = new Date(
