@@ -99,3 +99,5 @@ function updateCards(forecastDays, cityName) {
     }
   });
 }
+
+getWeather("Alexandria");
