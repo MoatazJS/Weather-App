@@ -50,3 +50,52 @@ function toggleLightTheme() {
 }
 
 /** API AND WEBSITE FUNCTIONALITY */
+
+var searchForm = document.querySelector("form");
+var cityInput = document.getElementById("citySearch");
+
+searchForm.addEventListener("submit", async function (e) {
+  e.preventDefault();
+  var city = cityInput.value.trim();
+  if (city !== "") {
+    getWeather(city);
+  }
+});
+
+async function getWeather(city) {
+  var apiKey = "7b8db958d8a24998bc962133253006";
+  var url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=3&aqi=no&alerts=no`;
+
+  try {
+    var res = await fetch(url);
+    var data = await res.json();
+
+    updateCards(data.forecast.forecastday, data.location.name);
+  } catch (error) {
+    console.error("Failed to fetch weather:", error);
+  }
+}
+
+function updateCards(forecastDays, cityName) {
+  var cards = document.querySelectorAll(".col-md-4");
+
+  forecastDays.forEach((day, index) => {
+    if (cards[index]) {
+      var card = cards[index];
+
+      card.querySelector(".cityName").textContent = cityName;
+      card.querySelector(".date").textContent = new Date(
+        day.date
+      ).toLocaleDateString("en-US", {
+        weekday: "long",
+        day: "numeric",
+        month: "short",
+      });
+      card.querySelector(".temp").textContent = `${day.day.avgtemp_c}°C`;
+      card.querySelector(".humidity").textContent = `${day.day.avghumidity}%`;
+      card.querySelector(
+        ".windSpeed"
+      ).textContent = `${day.day.maxwind_kph} km/h`;
+    }
+  });
+}
